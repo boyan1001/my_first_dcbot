@@ -1,7 +1,12 @@
-# 導入Discord.py模組
 import discord
-# 導入commands指令模組
+import os
+
 from discord.ext import commands
+from dotenv import load_dotenv
+
+# load dotenv
+load_dotenv()
+DCBOT_TOKEN = os.getenv("DCBOT_TOKEN")
 
 # intents是要求機器人的權限
 intents = discord.Intents.all()
